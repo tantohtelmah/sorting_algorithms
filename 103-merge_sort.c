@@ -6,11 +6,11 @@ void print_array_merge(const int *array, size_t size);
 
 /**
 * merge_sort - sorts an array
-* @arr: array to be sorted
+* @array: array to be sorted
 * @size: size of the array
 * Return: void
 */
-void merge_sort(int arr[], size_t size)
+void merge_sort(int *array[], size_t size)
 {
 	size_t i, mid;
 	int *left, *right;
@@ -24,15 +24,15 @@ void merge_sort(int arr[], size_t size)
 	right = malloc((size - mid) * sizeof(int));
 
 	for (i = 0; i < mid; ++i)
-		left[i] = arr[i];
+		left[i] = array[i];
 
 	for (i = mid; i < size; ++i)
-		right[i - mid] = arr[i];
+		right[i - mid] = array[i];
 
 	merge_sort(left, mid);
 	merge_sort(right, size - mid);
-	merge(arr, left, right, mid, size - mid);
-	print_array_merge(arr, size);
+	merge(array, left, right, mid, size - mid);
+	print_array_merge(array, size);
 	free(left);
 	free(right);
 }
