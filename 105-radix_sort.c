@@ -3,6 +3,13 @@
 void countSort(int arr[], size_t n, int exp);
 int getMax(int arr[], size_t n);
 
+/**
+ * radix_sort - sorts an array
+ * @array: array to be sorted
+ * @size: size of the array
+ * Return: void
+*/
+
 void radix_sort(int *array, size_t size)
 {
 	int exp;
@@ -17,6 +24,12 @@ void radix_sort(int *array, size_t size)
 		print_array(array, size);
 	}
 }
+/**
+ * getMax - gets max in array an array
+ * @arr: array to be sorted
+ * @n: size of the array
+ * Return: void
+*/
 
 int getMax(int arr[], size_t n)
 {
@@ -33,6 +46,13 @@ int getMax(int arr[], size_t n)
 	return (mx);
 }
 
+/**
+ * countSort - counts sorts
+ * @arr: array to be sorted
+ * @n: size of the array
+ * @exp: exp
+ * Return: void
+*/
 void countSort(int arr[], size_t n, int exp)
 {
 	int *output;
